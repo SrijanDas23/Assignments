@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(#0d1117,#4e4e4e);
+}
+
+h1{
+    color: white;
+    text-align: center;
+    margin: 2rem;
+}
+
+.card{
+    height: 20rem;
+    width: 20rem;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    place-self: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+img{
+    width: 100%;
+    align-self: center;
+    object-fit: contain;
+    border-radius: 10px 10px 0 0;
+}
+
+
+.card>*{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+button{
+    width: 7rem;
+    height: 1.5rem;
+    margin-bottom: 10px;
+    border: none;
+    background-color: rgb(36, 143, 43);
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease-in-out;
+}
+
+button:hover{
+    transform: translateY(-2px);
+    background-color: rgb(14, 199, 70);
+    border-radius: 8px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    row-gap: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@media (max-width: 1050px){
+    .cards{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 750px){
+    .cards{
+        grid-template-columns:repeat(1, 1fr);
+    }
+}
