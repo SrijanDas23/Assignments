@@ -1,0 +1,102 @@
+.about{
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.skills-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hard-skills, .soft-skills{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.skill-details{
+    display: flex;
+    column-gap: 0.3rem;
+}
+
+.skill-bar{
+    width: 200px;
+    border: solid #5E0000;
+    height: 10px;
+    border-radius: 10px;    
+}
+
+.react-skill-bar-filled{
+    width: 70%;
+    height: 10px;
+    background-color: #FF6B66;
+    border-radius: 10px;
+}
+
+.cpp-skill-bar-filled{
+    width: 70%;
+    height: 10px;
+    background-color: #FF6B66;
+    border-radius: 10px;
+}
+
+.dsa-skill-bar-filled{
+    width: 80%;
+    height: 10px;
+    background-color: #FF6B66;
+    border-radius: 10px;
+}
+
+.express-skill-bar-filled{
+    width: 65%;
+    height: 10px;
+    background-color: #FF6B66;
+    border-radius: 10px;
+}
+
+.communication-skill-bar-filled{
+    width: 70%;
+    height: 10px;
+    background-color: #FF6B66;
+    border-radius: 10px;
+}
+
+.thinking-skill-bar-filled{
+    width: 85%;
+    height: 10px;
+    background-color: #FF6B66;
+    border-radius: 10px;
+}
+
+.teamwork-skill-bar-filled{
+    width: 80%;
+    height: 10px;
+    background-color: #FF6B66;
+    border-radius: 10px;
+}
+
+.education>ul{
+    margin-left: 1rem;
+}
+.education>*{
+    margin: 1rem 0;
+}
+.education>ul>li{
+    margin: 0.3rem 0;
+}
+
+@media (max-width: 700px){
+    .skills-container{
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+}

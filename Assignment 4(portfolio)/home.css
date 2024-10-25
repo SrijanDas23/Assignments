@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    color: #5E0000;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(243, 165, 178, 0.2);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    font-size: 1rem;
+}
+
+.navi, .name{
+    display: flex;
+    direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 10px;
+    padding: 0.5rem 3rem;
+}
+
+.navi>a{
+    transition: color 0.3s ease;
+}
+
+.navi>a:hover{
+    color: #ff4a44;
+}
+
+.home{
+    background-color: rgba(243, 165, 178, 0.2);
+}
+
+.home-full-content{
+    padding: 4rem;
+    display: flex;
+    column-gap: 20rem;
+    justify-content: space-around;
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 1rem;
+}
+
+.home-location-contact{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.waving-hand{
+    display: inline;
+}
+
+.home-hireMe-button{
+    display: flex;
+    column-gap: 3rem;
+    align-items: center;
+}
+
+.action-button{
+    padding: 0.7rem 1.2rem;
+    width: fit-content;
+    background-color: #FFC132;
+    font-size: 1.05rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.action-button:hover{
+    transform: translateY(-4px);
+    background-color: #f8918e;
+    box-shadow: 4px 4px 5px #ff4a44;
+}
+
+.home-hireMe-button>p{
+    color: #FF6B66;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.home-hireMe-button>p:hover{
+    color: #FFC132;
+    transform: translateY(-4px);
+}
+
+.home-photo{
+    width: 300px;
+}
+
+@media (max-width: 1000px){
+    .home-full-content{
+        padding: 2rem;
+        flex-direction: column-reverse;
+        row-gap: 2rem;
+        align-items: center;
+    }
+    .home-hireMe-button{
+        flex-direction: column;
+        row-gap: 1rem;
+        align-items: start;
+    }
+    .name, .navi{
+        margin: 0;
+        padding: 1rem 1rem;
+        column-gap: 1rem;
+    }
+}
