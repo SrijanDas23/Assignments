@@ -6,6 +6,8 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -18,7 +20,7 @@
         <div class="navi">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="index.html">Contact</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
@@ -48,7 +50,9 @@
     
                 <div class="home-hireMe-button">
                     <a href="./Srijan Das resume.pdf" download="Srijan Das resume.pdf"><button class="action-button">Download CV</button></a>
-                    <p>Learn More about Me!</p>
+                    <p>
+                        <a href="#about">Learn More about Me!</a>
+                    </p>
                 </div>
             </div>
             <div class="photo">
@@ -156,6 +160,106 @@
         </div>
     </div>
 
-    <div class="projects" id="projects"></div>
+    <div class="projects" id="projects">
+        <h2>Lets have a look at my Projects now!</h2>
+        <div class="project-card-container">
+            <div class="project-cards">
+                <div class="project-1">
+                    <img src="Project 1.png" alt="" class="project-img">
+                    <div class="project-content">
+                        <div class="project-heading">
+                            <h3>Real Estate Website</h3>
+                            <a href="https://real-estate-2-fak2.onrender.com/">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <p>Real Estate website to add properties for rent and sale.</p>
+                        <div class="project-tech-stack">
+                            <div class="project-tech-stack-item">
+                                <p>React JS</p>
+                            </div>
+                            <div class="project-tech-stack-item">
+                                <p>Express JS</p>
+                            </div>
+                            <div class="project-tech-stack-item">
+                                <p>Node JS</p>
+                            </div>
+                            <div class="project-tech-stack-item">
+                                <p>Mongo DB</p>
+                            </div>
+                            <div class="project-tech-stack-item">
+                                <p>Redux</p>
+                            </div>
+                            <div class="project-tech-stack-item">
+                                <p>Chakra UI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-2">
+                    <img src="Project 2.png" alt="" class="project-img">
+                    <div class="project-content">
+                        <div class="project-heading">
+                            <h3>Personal Portfolio</h3>
+                            <a href="https://srijandas-portfolio.netlify.app/">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <p>Personal Portfolio Website to showcase my frontend skills</p>
+                        <div class="project-tech-stack">
+                            <div class="project-tech-stack-item">
+                                <p>React JS</p>
+                            </div>
+                            <div class="project-tech-stack-item">
+                                <p>Tailwind CSS</p>
+                            </div>
+                            <div class="project-tech-stack-item">
+                                <p>Framer Motion</p>
+                            </div>
+                            <div class="project-tech-stack-item">
+                                <p>TypeScript</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact" id="contact">
+        <h2>Feel free to Contact Me!</h2>
+        <div class="contact-form">
+            <form>
+                <div class="form-name">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+            
+                <div class="form-mail">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-message">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                
+                <button type="submit" class="action-button">Submit</button>
+            </form>
+        </div>
+        <div class="other-contacts">
+            <h3>Other ways to contact me!</h3>
+            <div class="social-media">
+                <i class="fa-brands fa-linkedin fa-xl"></i>
+                <i class="fa-brands fa-github fa-xl"></i>
+                <i class="fa-brands fa-instagram fa-xl"></i>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made by Srijan Das</p>
+    </footer>
 </body>
 </html>

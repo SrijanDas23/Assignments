@@ -91,19 +91,34 @@ nav{
 }
 
 .home-hireMe-button>p{
-    color: #FF6B66;
-    text-decoration: underline;
-    cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .home-hireMe-button>p:hover{
-    color: #FFC132;
     transform: translateY(-4px);
+}
+
+.home-hireMe-button>p>a{
+    color: #FF6B66;
+    text-decoration: underline;
+    cursor: pointer;
+    transition:  color 0.3s ease;
+}
+
+.home-hireMe-button>p>a:hover{
+    color: #FFC132;
 }
 
 .home-photo{
     width: 300px;
+}
+
+footer{
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(243, 165, 178, 0.2);
+    bottom: 0;
 }
 
 @media (max-width: 1000px){

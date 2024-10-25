@@ -1,0 +1,112 @@
+.projects{
+    background-color: rgba(243, 165, 178, 0.2);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.project-cards{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 100%;
+}
+
+.project-cards>*{
+    background-color: #eda19e;
+    column-gap: 15rem;
+    align-items: center;
+    border-radius: 1rem;
+    display: flex;
+}
+
+.project-cards>*:nth-child(odd){
+    flex-direction: row;
+}
+
+.project-cards>*:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.project-heading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.project-cards>*:nth-child(odd)>.project-content{
+    margin-right: 1rem;
+}
+
+.project-cards>*:nth-child(even)>.project-content{
+    margin-left: 1rem;
+}
+
+.project-img{
+    width: 500px;
+    border-radius: 1rem;
+}
+
+.project-tech-stack{
+    display: flex;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+    row-gap: 0.7rem;
+}
+
+.project-tech-stack-item{
+    background-color: #fa7570;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-tech-stack-item:hover{
+    box-shadow: 4px 4px 5px #ff4a44;
+    transform: translateY(-4px);
+}
+
+@media (max-width: 1200px){
+    .project-cards>*:nth-child(even){
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+    .project-cards>*:nth-child(odd){
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+    .project-img{
+        width: 100%
+    }
+    .project-content{
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 700px){
+    .project-content{
+        font-size: 0.8rem;
+    }
+    .project-tech-stack{
+        column-gap: 0.5rem;
+    }
+}
+
+@media (max-width: 400px){
+    .project-content{
+        font-size: 0.6rem;
+    }
+    .project-tech-stack{
+        column-gap: 0.1rem;
+    }
+}
