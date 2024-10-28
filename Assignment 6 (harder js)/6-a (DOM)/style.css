@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+main{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.container{
+    width: 100%;
+}
+
+#container1{
+    background-color: aqua;
+}
+
+#container2{
+    background-color: brown;
+}
