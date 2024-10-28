@@ -32,3 +32,21 @@ function changeName(){
 
     name.value='';
 }
+
+function random(num){
+    return Math.floor(Math.random()*(num+1));
+}
+
+let colName=null;
+
+function randCol(){
+    const container=document.getElementById('container3');
+    if(colName!==null){
+        container.removeChild(colName);
+    }
+    const colour=`rgb(${random(255)},${random(255)},${random(255)})`;
+    colName=document.createElement('h1');
+    colName.innerHTML=colour;
+    container.appendChild(colName);
+    container.style.backgroundColor=colour;
+}
