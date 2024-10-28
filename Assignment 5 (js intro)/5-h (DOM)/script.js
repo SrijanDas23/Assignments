@@ -14,6 +14,6 @@ function addTask(){
 
 function deleteTask(button){
     console.log(button);
-    const taskItem=button.parentNode;
-    taskItem.remove();
+    const task=button.parentNode;
+    task.remove();
 }
