@@ -99,4 +99,7 @@
         flex-direction: column;
         row-gap: 3rem;
     }
+    .about{
+        padding: 2rem;
+    }
 }
