@@ -1,6 +1,7 @@
 img{
     width: 270px;
     height: 200px;
+    object-fit: contain;
 }
 
 #images{
@@ -8,7 +9,6 @@ img{
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-around;
-    object-fit: contain;
 }
 
 h1{
