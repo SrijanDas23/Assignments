@@ -1,0 +1,16 @@
+img{
+    width: 270px;
+    height: 200px;
+}
+
+#images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    object-fit: contain;
+}
+
+h1{
+    text-align: center;
+}

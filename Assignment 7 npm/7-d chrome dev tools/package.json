@@ -1,0 +1,15 @@
+{
+  "name": "7-d-chrome-dev-tools",
+  "version": "1.0.0",
+  "description": "chrome dev tools assignment",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7"
+  }
+}
