@@ -1,4 +1,5 @@
 let largeImg=null;
+let buttonContainer=null;
 let currentIndex=0;
 const images=['img1.jpg', 'img2.jpg', 'img3.jpg'];
 
@@ -8,6 +9,13 @@ function enlarge(img){
     if (largeImg) {
         largeImg.remove();
     }
+    if(buttonContainer){
+        buttonContainer.remove();
+    }
+    
+    let imgSrc=img.getAttribute('src');
+    currentIndex=images.indexOf(imgSrc);
+    console.log(currentIndex);
 
     largeImg = document.createElement('img');
     const largeImgContainer=document.getElementById('largeImgContainer');
@@ -15,7 +23,7 @@ function enlarge(img){
     largeImg.style.width='500px';
     largeImgContainer.appendChild(largeImg);
 
-    const buttonContainer=document.createElement('div');
+    buttonContainer=document.createElement('div');
     
     const prev=document.createElement('button');
     prev.textContent='prev';
