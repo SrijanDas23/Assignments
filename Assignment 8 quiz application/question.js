@@ -17,6 +17,8 @@ const timerDisplay=document.getElementById('time-left');
 const firstRemark=document.getElementById('first-remark');
 const secondRemark=document.getElementById('second-remark');
 
+let scores=[];
+
 (async()=>{
     await fetchQuestion();
     setName();
@@ -42,6 +44,7 @@ async function fetchQuestion(){
         setChoices();
         startTimer();
         clearSelectedAnswers();
+        clearRemarks();
     }
     catch(err){
         console.log(err);
@@ -119,10 +122,15 @@ function checkAnswer(){
     nextButton.addEventListener('click', ()=>{
         main.removeChild(nextButton);
         console.log("Next Question");
+        storeMarkScored();
         currentQuestion++;
         if(currentQuestion<data.questions.length){
             console.log("Next Question");
             fetchQuestion();
+        }
+        else{
+            storeResults();
+            window.location.href='results.html';
         }
     });
 }
@@ -154,3 +162,15 @@ function clearSelectedAnswers(){
         answer.classList.remove('selected');
     });
 }
+
+function clearRemarks(){
+    firstRemark.innerHTML='';
+    firstRemark.classList.remove('correct');
+    firstRemark.classList.remove('wrong');
+    secondRemark.innerHTML='';
+}
+
+function storeResults(){
+    localStorage.setItem('score', currentScore);
+}
+

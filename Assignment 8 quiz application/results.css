@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'league Spartan', sans-serif;
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.resultContainer{
+    padding: 4rem;
+    background-color: #ECECEC;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.result{
+    font-size: 1.6rem;
+}
+
+.reviewContainer{
+    background-color: #ECECEC;
+    padding: 1rem 5.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    color: #717171;
+    max-height: 30%;
+    overflow-y: auto;
+}
