@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'league Spartan', sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 20px;
+}
+
+.enterName{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem 4rem 5rem 4rem ;
+    border-radius: 20px;
+    background-color: #ECECEC;
+}
+
+#name{
+    border: none;
+    height: 1.4rem;
+    border-radius: 6px;
+}
+
+.quizDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 8rem;
+    border-radius: 20px;
+    background-color: #ECECEC;
+    color: #717171;
+}
+
+#startButton{
+    background-color: #268BFF;
+    color: white;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#startButton:hover{
+    background-color: #1573C6;
+    transform: translateY(-2px);
+}
