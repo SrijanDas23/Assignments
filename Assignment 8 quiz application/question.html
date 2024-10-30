@@ -18,7 +18,7 @@
             <div class="left-container">
                 <div class="displayedQuestionContainer">
                     <div class="displayedQuestion">
-                        <p>Question 1</p>
+                        <p>Question <span id="question-no"></span></p>
                         <p id="question"></p>
                     </div>
                     <div class="answers">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="bottom-part">
-                    <p>Correct Answer, please click on next</p>
+                    <p><span id="first-remark"></span> <span id="second-remark"></span></p>
                 </div>
             </div>
             <div class="infoContainer">
@@ -50,16 +50,15 @@
                 <div class="timerAndScoreContainer">
                     <div class="timerContainer">
                         <p>you have</p>
-                        <h3>00:40s time left</h3>
+                        <h3><span id="time-left"></span> time left</h3>
                         <p>to answer this question</p>
                     </div>
                     <div class="scoreContainer">
-                        <h3 id="score">Score: </h3>
+                        <h3>Score: <span id="score"></span></h3>
                     </div>
                 </div>
             </div>
         </div>
-        <button id="checkButton">Check</button>
     </main>
 </body>
 </html>

@@ -58,10 +58,15 @@ main{
     border-radius: 1rem;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .answer:hover{
-    border: #59A3F7 2px solid;
+    border: #59A3F7 1px solid;
+}
+
+.selected{
+    border: #59A3F7 2px solid !important;
 }
 
 .answer>*{
@@ -98,7 +103,7 @@ main{
     row-gap: 0.5rem;
 }
 
-#checkButton{
+#checkButton, #nextButton{
     background-color: #59A3F7;
     border: none;
     border-radius: 10px;
@@ -111,7 +116,15 @@ main{
     transition: transform 0.2s ease-in-out;
 }
 
-#checkButton:hover{
+#checkButton:hover, #nextButton:hover{
     background-color: #1573C6;
     transform: translateY(-2px);
+}
+
+.correct{
+    color: green;
+}
+
+.wrong{
+    color: red;
 }
