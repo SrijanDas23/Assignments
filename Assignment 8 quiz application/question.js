@@ -43,6 +43,8 @@ async function fetchQuestion(){
         setQuestion();
         setChoices();
         startTimer();
+        enableChoices();
+
         clearSelectedAnswers();
         clearRemarks();
     }
@@ -98,6 +100,7 @@ function showCheckButton(selectedAnswer){
 }
 
 function checkAnswer(){
+    clearInterval(timerInterval);
     console.log(selectedChoice);
     console.log(choices[correctAnswer]);
     if(selectedChoice===choices[correctAnswer]){
@@ -113,6 +116,7 @@ function checkAnswer(){
         firstRemark.innerHTML='Wrong Answer';
     }
     secondRemark.innerHTML='Please click on Next';
+    disableChoices();
 
     main.removeChild(checkButton);
     nextButton=document.createElement('button');
@@ -122,7 +126,6 @@ function checkAnswer(){
     nextButton.addEventListener('click', ()=>{
         main.removeChild(nextButton);
         console.log("Next Question");
-        storeMarkScored();
         currentQuestion++;
         if(currentQuestion<data.questions.length){
             console.log("Next Question");
@@ -174,3 +177,17 @@ function storeResults(){
     localStorage.setItem('score', currentScore);
 }
 
+function disableChoices(){
+    const answers=document.getElementsByClassName('answer');
+    Array.from(answers).forEach(answer=>{
+        answer.style.pointerEvents='none';    
+    });
+}
+
+function enableChoices() {
+    const answers=document.getElementsByClassName('answer');
+    Array.from(answers).forEach(answer=>{
+        answer.style.pointerEvents='auto';
+        answer.onclick(showCheckButton(answer));
+    });
+}
