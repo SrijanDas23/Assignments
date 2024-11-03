@@ -2,7 +2,7 @@ let topic=null;
 let question=null;
 let choices=[];
 let correctAnswer=null;
-let score=null;
+let score=0;
 let data=null;
 let currentQuestion=0;
 let currentScore=0;
@@ -11,8 +11,10 @@ let timerInterval=null;
 let checkButton=null;
 let nextButton=null;
 let selectedChoice=null;
+let chosenWrongAnswer=null;
 const main=document.querySelector('main');
 const timerDisplay=document.getElementById('time-left');
+
 
 const firstRemark=document.getElementById('first-remark');
 const secondRemark=document.getElementById('second-remark');
@@ -95,6 +97,8 @@ function showCheckButton(selectedAnswer){
     checkButton.id='checkButton';
     main.appendChild(checkButton);
 
+    chosenWrongAnswer=selectedAnswer;
+
     selectedChoice=selectedAnswer.innerText;
     checkButton.addEventListener('click', checkAnswer);
 }
@@ -103,6 +107,10 @@ function checkAnswer(){
     clearInterval(timerInterval);
     console.log(selectedChoice);
     console.log(choices[correctAnswer]);
+
+    const correctAnswerElement=document.getElementById(`answer${correctAnswer+1}`);
+    correctAnswerElement.classList.add('correct-answer');
+
     if(selectedChoice===choices[correctAnswer]){
         console.log("Correct Answer");
         currentScore+=score;
@@ -110,10 +118,13 @@ function checkAnswer(){
         scoreElement.innerHTML=currentScore;
         firstRemark.innerHTML='Correct Answer';
         firstRemark.classList.add('correct');
+        scores.push(score);
     }
     else{
+        chosenWrongAnswer.classList.add('wrong-answer');
         firstRemark.classList.add('wrong');
         firstRemark.innerHTML='Wrong Answer';
+        scores.push(0);
     }
     secondRemark.innerHTML='Please click on Next';
     disableChoices();
@@ -126,6 +137,7 @@ function checkAnswer(){
     nextButton.addEventListener('click', ()=>{
         main.removeChild(nextButton);
         console.log("Next Question");
+        clearAnswerStyles();
         currentQuestion++;
         if(currentQuestion<data.questions.length){
             console.log("Next Question");
@@ -175,6 +187,9 @@ function clearRemarks(){
 
 function storeResults(){
     localStorage.setItem('score', currentScore);
+    for(let i=0;i<scores.length;i++){
+        localStorage.setItem(`score${i+1}`, scores[i]);
+    }
 }
 
 function disableChoices(){
@@ -185,9 +200,17 @@ function disableChoices(){
 }
 
 function enableChoices() {
+    const answers = document.getElementsByClassName('answer');
+    Array.from(answers).forEach(answer => {
+        answer.style.pointerEvents = 'auto';
+        answer.addEventListener('click', () => showCheckButton(answer));
+    });
+}
+
+function clearAnswerStyles() {
     const answers=document.getElementsByClassName('answer');
     Array.from(answers).forEach(answer=>{
-        answer.style.pointerEvents='auto';
-        answer.onclick(showCheckButton(answer));
+        answer.classList.remove('correct-answer');
+        answer.classList.remove('wrong-answer');
     });
 }

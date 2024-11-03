@@ -128,3 +128,20 @@ main{
 .wrong{
     color: red;
 }
+
+.correct-answer {
+    background-color: #CDF8C9;
+}
+
+.correct-answer::after {
+    content: "✔";
+    margin: 18rem;
+    color: white;
+    border-radius: 50%;
+    background-color: green;
+    padding: 2px 7px;
+}
+
+.wrong-answer {
+    background-color: #F8C9C9;
+}
