@@ -133,15 +133,67 @@ main{
     background-color: #CDF8C9;
 }
 
-.correct-answer::after {
-    content: "✔";
-    margin: 18rem;
+.answer-container{
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.tick {
+    width: 25px;
+    height: 25px;
     color: white;
-    border-radius: 50%;
+    border-radius: 50%; 
     background-color: green;
-    padding: 2px 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .wrong-answer {
     background-color: #F8C9C9;
+}
+
+@media (max-width: 950px) {
+    p{
+        font-size: 0.8rem;
+    }
+    .main-content{
+        grid-template-columns: 0.8fr;
+    }
+    .bottom-part{
+        margin-top: 1rem;
+    }
+    .answer{
+        width: 80%;
+        max-width: 300px;
+    }
+    .correct-answer::after {
+        margin: 16rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .answer{
+        width: 90%;
+    }
+    .correct-answer::after {
+        margin: 16rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .main-content{
+        grid-template-columns: 1fr;
+    }
+    .answer{
+        width: 100%;
+        max-width: 250px;
+    }
+    .left-container{
+        padding: 1rem;
+    }
+    .correct-answer::after {
+        margin: 12.5rem;
+    }
 }

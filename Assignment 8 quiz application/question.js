@@ -14,6 +14,7 @@ let selectedChoice=null;
 let chosenWrongAnswer=null;
 const main=document.querySelector('main');
 const timerDisplay=document.getElementById('time-left');
+let tickElement=null;
 
 
 const firstRemark=document.getElementById('first-remark');
@@ -109,6 +110,10 @@ function checkAnswer(){
     console.log(choices[correctAnswer]);
 
     const correctAnswerElement=document.getElementById(`answer${correctAnswer+1}`);
+    tickElement=document.createElement('div');
+    tickElement.innerHTML='✔';
+    tickElement.classList.add('tick');
+    correctAnswerElement.parentElement.appendChild(tickElement);
     correctAnswerElement.classList.add('correct-answer');
 
     if(selectedChoice===choices[correctAnswer]){
@@ -213,4 +218,5 @@ function clearAnswerStyles() {
         answer.classList.remove('correct-answer');
         answer.classList.remove('wrong-answer');
     });
+    tickElement.remove();
 }
