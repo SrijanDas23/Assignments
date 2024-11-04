@@ -131,6 +131,7 @@ main{
 
 .correct-answer {
     background-color: #CDF8C9;
+    border: none !important;
 }
 
 .answer-container{
@@ -152,6 +153,7 @@ main{
 
 .wrong-answer {
     background-color: #F8C9C9;
+    border: none !important;
 }
 
 @media (max-width: 950px) {
@@ -168,17 +170,11 @@ main{
         width: 80%;
         max-width: 300px;
     }
-    .correct-answer::after {
-        margin: 16rem;
-    }
 }
 
 @media (max-width: 750px) {
     .answer{
         width: 90%;
-    }
-    .correct-answer::after {
-        margin: 16rem;
     }
 }
 
@@ -192,8 +188,5 @@ main{
     }
     .left-container{
         padding: 1rem;
-    }
-    .correct-answer::after {
-        margin: 12.5rem;
     }
 }

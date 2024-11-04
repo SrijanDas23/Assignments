@@ -170,7 +170,13 @@ function startTimer(){
             time=60;
             currentQuestion++;
             if(currentQuestion<data.questions.length){
+                scores.push(0);
                 fetchQuestion();
+            }
+            else{
+                scores.push(0);
+                storeResults();
+                window.location.href='results.html';
             }
         }
     }, 1000);
