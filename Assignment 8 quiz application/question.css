@@ -59,12 +59,8 @@ main{
     display: flex;
     align-items: center;
     cursor: pointer;
-}
-
-.answer>p{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    min-height: fit-content;
+    min-width: fit-content;
 }
 
 .answer:hover{
@@ -76,7 +72,7 @@ main{
 }
 
 .answer>*{
-    margin: 1rem;
+    margin: 0.5rem 1rem;
 }
 
 .infoContainer{
