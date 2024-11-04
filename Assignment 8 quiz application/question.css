@@ -61,6 +61,12 @@ main{
     cursor: pointer;
 }
 
+.answer>p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .answer:hover{
     border: #59A3F7 1px solid;
 }
